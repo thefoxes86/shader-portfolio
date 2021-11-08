@@ -177,7 +177,6 @@ function animationFluid(e) {
       sheet.sequence.pause();
       showedPortfolio = true;
     }, 4000);
-    console.log("Init animation");
   } else if (
     e.wheelDelta >= 15 &&
     showedPortfolio === true &&
@@ -188,7 +187,6 @@ function animationFluid(e) {
     sheet.sequence.play({
       direction: "reverse",
     });
-    console.log("Back animation");
   } else if (showedPortfolio === true) {
     if (e.wheelDelta <= 0 && camera.position.x <= meshes.length * 0.55) {
       camera.position.x -= e.wheelDelta / 10000;
@@ -198,8 +196,6 @@ function animationFluid(e) {
       showedPortfolio = false;
     }
   }
-
-  console.log(camera.position.x);
 }
 
 function onWindowResize() {
